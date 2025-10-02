@@ -28,25 +28,30 @@ A modern frontend application built with React, TypeScript, and Vite, following 
 - **Charts**: Recharts
 - **Architecture**: Feature-Sliced Design (FSD)
 
-## Installation
+# Installation
 
-# Install dependencies
+## Prerequisitions
+
+node 18.0+ version
+npm
+
+## Install dependencies
 
 `npm install`
 
-## Development
+# Development
 
-# Start development server
+## Start development server
 
 `npm run dev`
 
 The application will be available at `http://localhost:5173`
 
-# Build for production
+## Build for production
 
 `npm run build`
 
-# Preview production build
+## Preview production build
 
 `npm run preview`
 
@@ -60,8 +65,6 @@ This project includes a GitHub Actions workflow for automatic deployment:
 2. Go to repository Settings → Pages
 3. Set Source to "GitHub Actions"
 4. Push to the `main` branch to trigger deployment
-
-# Build the project
 
 ## API Sources
 
