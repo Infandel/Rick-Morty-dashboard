@@ -28,60 +28,27 @@ A modern frontend application built with React, TypeScript, and Vite, following 
 - **Charts**: Recharts
 - **Architecture**: Feature-Sliced Design (FSD)
 
-## Project Structure
-
-\`\`\`
-src/
-├── app/ # Application initialization
-├── pages/ # Page components
-│ ├── posts/ # Posts table page
-│ └── characters/ # Characters analytics page
-├── widgets/ # Complex UI blocks
-│ └── layout/ # Navigation and layout
-├── features/ # User scenarios and features
-│ ├── posts-table/ # Posts table with filters
-│ └── character-charts/ # Analytics charts
-├── entities/ # Business entities
-│ ├── post/ # Post entity and API
-│ └── character/ # Character entity and API
-└── shared/ # Reusable code
-├── api/ # API clients
-├── ui/ # UI components
-└── lib/ # Utilities
-\`\`\`
-
 ## Installation
-
-\`\`\`bash
 
 # Install dependencies
 
-npm install
-\`\`\`
+`npm install`
 
 ## Development
 
-\`\`\`bash
-
 # Start development server
 
-npm run dev
-\`\`\`
+`npm run dev`
 
 The application will be available at `http://localhost:5173`
 
-## Build
-
-\`\`\`bash
-
 # Build for production
 
-npm run build
+`npm run build`
 
 # Preview production build
 
-npm run preview
-\`\`\`
+`npm run preview`
 
 ## Deployment to GitHub Pages
 
@@ -94,28 +61,7 @@ This project includes a GitHub Actions workflow for automatic deployment:
 3. Set Source to "GitHub Actions"
 4. Push to the `main` branch to trigger deployment
 
-### Manual Deployment
-
-\`\`\`bash
-
 # Build the project
-
-npm run build
-
-# Deploy the dist folder to GitHub Pages
-
-# (You can use gh-pages package or manual upload)
-
-\`\`\`
-
-**Important**: Update the `base` property in `vite.config.ts` if your repository name is not the root:
-
-\`\`\`typescript
-export default defineConfig({
-base: '/your-repo-name/', // Change this to your repository name
-// ... rest of config
-})
-\`\`\`
 
 ## API Sources
 
@@ -123,7 +69,3 @@ base: '/your-repo-name/', // Change this to your repository name
   - Used for posts and users data
 - **Rick and Morty API**: https://rickandmortyapi.com/
   - Used for character analytics and visualization
-
-## License
-
-MIT
