@@ -32,8 +32,8 @@ A modern frontend application built with React, TypeScript, and Vite, following 
 
 ## Prerequisitions
 
-node 18.0+ version
-npm
+- node `18.0+` version
+- `npm` for installing deps
 
 ## Install dependencies
 
