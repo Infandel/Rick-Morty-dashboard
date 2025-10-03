@@ -13,7 +13,7 @@ export function useCharacterStats(characters: Character[]) {
 		return Array.from(locationMap.entries())
 			.map(([location, count]) => ({ location, count }))
 			.sort((a, b) => b.count - a.count)
-			.slice(0, 10);
+			.slice(0, 15);
 	}, [characters]);
 
 	const statusStats = useMemo<StatusStats[]>(() => {
@@ -37,8 +37,7 @@ export function useCharacterStats(characters: Character[]) {
 
 		return Array.from(speciesMap.entries())
 			.map(([species, count]) => ({ species, count }))
-			.sort((a, b) => b.count - a.count)
-			.slice(0, 8);
+			.sort((a, b) => b.count - a.count);
 	}, [characters]);
 
 	return {

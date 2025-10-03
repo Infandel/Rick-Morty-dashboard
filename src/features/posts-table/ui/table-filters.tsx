@@ -1,7 +1,7 @@
 import { Input } from '@shared/ui/input';
-import { Select } from '@shared/ui/select';
 import type { Table } from '@tanstack/react-table';
 import type { Post } from '@entities/post';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 interface TableFiltersProps {
 	table: Table<Post>;
@@ -24,13 +24,18 @@ export function TableFilters({ table, globalFilter, onGlobalFilterChange, users 
 				/>
 			</div>
 			<div className='w-full sm:w-48'>
-				<Select value={userFilter} onChange={(e) => table.getColumn('userId')?.setFilterValue(e.target.value)}>
-					<option value=''>All Users</option>
-					{Array.from(users.entries()).map(([id, name]) => (
-						<option key={id} value={name}>
-							{name}
-						</option>
-					))}
+				<Select onValueChange={(e) => table.getColumn('userId')?.setFilterValue(e)} defaultValue={userFilter}>
+					<SelectTrigger>
+						<SelectValue placeholder='Select user' />
+					</SelectTrigger>
+					<SelectContent>
+						<SelectItem value={' '}>All Users</SelectItem>
+						{Array.from(users.entries()).map(([id, name]) => (
+							<SelectItem key={id} value={name} className='capitalize'>
+								{name}
+							</SelectItem>
+						))}
+					</SelectContent>
 				</Select>
 			</div>
 		</div>

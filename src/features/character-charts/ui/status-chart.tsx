@@ -29,7 +29,6 @@ export function StatusChart({ data }: StatusChartProps) {
 							labelLine={false}
 							label={({ status, percent }) => `${status}: ${(percent * 100).toFixed(0)}%`}
 							outerRadius={100}
-							fill='#8884d8'
 							dataKey='count'
 							nameKey='status'
 						>
