@@ -1,4 +1,4 @@
-import type React from 'react';
+import { CSSProperties } from 'react';
 import { flexRender } from '@tanstack/react-table';
 import { FixedSizeList as List } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
@@ -14,7 +14,7 @@ interface VirtualizedTableProps {
 export function VirtualizedTable({ table }: VirtualizedTableProps) {
 	const { rows } = table.getRowModel();
 
-	const Row = ({ index, style }: { index: number; style: React.CSSProperties }) => {
+	const Row = ({ index, style }: { index: number; style: CSSProperties }) => {
 		const row = rows[index];
 		return (
 			<div
